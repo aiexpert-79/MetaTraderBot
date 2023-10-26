@@ -15,6 +15,7 @@ Here is some information about each of them:
 5. Gold: Gold is considered a commodity. It is valued for its rarity, beauty, and use in jewelry and other decorative items. Gold is also used as a store of value and a hedge against inflation. It can be traded on commodity exchanges and its price is influenced by supply and demand factors.
 
 These indices are widely followed by investors and provide a snapshot of how the overall stock market or specific sectors are performing.
+
 ![Metatrader 5](image.png)
 
 
@@ -36,7 +37,7 @@ Once the installation is complete, you can import talib in your Python script us
 import talib
 ```
 
-Now you can use the various functions provided by talib to compute technical indicators. For example, to compute the simple moving average (SMA) of a price series, you can use the `SMA` function, like this:
+Now you can use the various functions provided by talib to compute technical indicators. For example, to compute the simple moving average (SMA) of a price series, you can use the `SMA` and `RSI` function, like this:
 
 ```python
 sma = talib.SMA(close_prices, timeperiod=20)
@@ -48,9 +49,17 @@ You can find the complete documentation for talib on the official website: https
 
 Note that talib requires the underlying TA-Lib C library to be installed on your system. The Python library acts as a wrapper around the C library, so make sure to follow the installation instructions provided on the website to correctly set up talib.
 
+#### RSI and SMA
+The Relative Strength Index (RSI) and Exponential Moving Average (EMA) are two popular technical analysis indicators used in trading.
+The RSI is a momentum oscillator that measures the speed and change of price movements. It compares the magnitude of recent gains and losses over a specified period, typically 14 days, and generates an index ranging from 0 to 100. Generally, an RSI above 70 is considered overbought, indicating a potential reversal to the downside, while an RSI below 30 is considered oversold, indicating a potential reversal to the upside.
+On the other hand, the EMA is a type of moving average that assigns greater weight to more recent price data. It gives more importance to recent prices, making it more responsive to current market conditions. Traders use EMA to identify trends, support and resistance levels, and potential entry or exit points.
+The relationship between RSI and EMA can be used together to generate trading signals. For example, when the RSI indicates overbought conditions (above 70) and the short-term EMA crosses below a longer-term EMA, it may signal a bearish trend reversal and a potential selling opportunity. Conversely, when the RSI indicates oversold conditions (below 30) and the short-term EMA crosses above a longer-term EMA, it may signal a bullish trend reversal and a potential buying opportunity.
+However, it's important to note that no single indicator is foolproof, and traders often use a combination of indicators and additional analysis to make informed trading decisions. It is always recommended to thoroughly test and validate any trading strategy before applying it to real market conditions.
+
 ### User-Friendly Interface 
 Develop an intuitive user interface that allows users to monitor the bot's activity, customize settings, and review trading history.
-![UI](image-2.png)
+
+![UI](image-1.png)
 
 ### Customizable Strategies
 Provide flexibility to customize trading strategies, entry and exit criteria, risk management parameters, and asset allocation.
